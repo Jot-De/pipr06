@@ -2,14 +2,16 @@ from .item import Item
 from .price import Price
 from typing import List
 
-
 class ReceiptPosition:
     def __init__(self, amount: float, item: Item):
-        pass
+        if amount <= 0:
+            raise ValueError("Amount cannot be negative")
+        self._amount = amount
+        #Add more here
 
     @property
-    def item(self) -> Item:
-        pass
+    def item(self):
+        return self._item
 
     @property
     def amount(self) -> float:
