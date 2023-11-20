@@ -10,12 +10,13 @@ class ReceiptPosition:
         #Add more here
 
     @property
-    def item(self):
-        return self._item
-
+    def amount(self):
+        # already done
+        return self._amount
+    
     @property
-    def amount(self) -> float:
-        pass
+    def item(self):
+       pass
 
     @property
     def total_price(self) -> Price:
