@@ -4,17 +4,18 @@ from typing import List, Optional
 from .item import Item
 from .receipt_position import ReceiptPosition
 from .price import Price
-
+from datetime import datetime
 
 class Receipt:
-    def __init__(self, positions: Optional[List[ReceiptPosition]] = None):
-        # set date attribute and set it to today
-        # https://docs.python.org/3/library/datetime.html
-        pass
+    # Already done
+    def __init__(self, positions: list[ReceiptPosition] | None = None):
+        self._positions = [] if positions is None else positions
+        self._date = datetime.today()
 
     @property
     def date(self):
-        pass
+        # already done
+        return self._date
 
     @property
     def positions(self):
