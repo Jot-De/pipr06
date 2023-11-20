@@ -1,5 +1,6 @@
 from typing import List
 from .price import Price
+import random
 
 BARCODE_LENGTH = 13
 
@@ -46,7 +47,13 @@ class Item:
 
 def random_item() -> Item:
     """Generate a random item"""
-    
+    list_of_names = ['Milk', 'Bread', 'Juice', 'Oranges', 'Apple']
+
+    random_name = random.choice(list_of_names)
+    random_price = random.randint(1, 100)
+    random_barcode = str(random.randint(1000000000000, 9999999999999))
+    return Item(random_name, random_price, random_barcode)
+
 
 
 def generate_items(num_items: int) -> List[Item]:
