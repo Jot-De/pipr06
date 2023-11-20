@@ -2,12 +2,16 @@ from typing import Tuple, List
 
 
 class Price:
+    # This is already done
     def __init__(self, value_gr):
-        pass
+        if value_gr < 0:
+            raise ValueError("Price cannot be negative")
+        self._value_gr = value_gr
 
     @property
     def value_gr(self):
-        pass
+        #This method is already done
+        return self._value_gr
 
     def __add__(self, other: "Price") -> "Price":
         # HINT https://docs.python.org/3/library/operator.html
