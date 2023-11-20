@@ -11,10 +11,16 @@ class Item:
         if not name:
             raise ValueError("Name cannot be empty")
         #ADD MORE HERE
-        # HINT barcode must be valid and have 13 digits
+        # HINT barcode must be valid and have 13 digits 
+        if type(barcode) is not str:
+            raise TypeError('Barcode must be string')
+        if len(barcode) != 13:
+            raise ValueError('Barcode must be 13 digits long.')
 
         self._name = name
         #ADD MORE HERE
+        self._price = price
+        self._barcode = barcode
 
     @property
     def name(self):
@@ -23,17 +29,19 @@ class Item:
 
     @property
     def price(self):
-        pass
+        return self._price
 
     @property
     def barcode(self):
-        pass
+        return self._barcode
 
     def __str__(self) -> str:
-        pass
+        description = f"Item's name: {self.name} (price: {self.price})."
+        return description
 
     def __repr__(self) -> str:
-        pass
+        info = f'Name: {self.name}, price: {self.price}, barcode: {self.barcode}.'
+        return info
 
 
 def random_item() -> Item:
