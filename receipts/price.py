@@ -14,8 +14,9 @@ class Price:
         return self._value_gr
 
     def __add__(self, other: "Price") -> "Price":
-        # HINT https://docs.python.org/3/library/operator.html
-        pass
+        #This method is already done
+        return Price(self.value_gr + other.value_gr)
+
 
     def __sub__(self, other: "Price") -> "Price":
         pass
