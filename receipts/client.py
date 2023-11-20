@@ -2,14 +2,15 @@ from typing import List
 from .price import Price
 from .receipt import Receipt
 
-
 class Client:
-    def __init__(self, name, user_id, receipts: List[Receipt] = None):
-        pass
+    def __init__(self, name, user_id, receipts: list[Receipt] = None):
+        self._name = name
+        # Add more here
 
     @property
+    #this method is already done
     def name(self):
-        pass
+        return self._name
 
     @property
     def user_id(self):
