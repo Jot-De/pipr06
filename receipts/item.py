@@ -46,6 +46,7 @@ class Item:
 
 def random_item() -> Item:
     """Generate a random item"""
+    
 
 
 def generate_items(num_items: int) -> List[Item]:
