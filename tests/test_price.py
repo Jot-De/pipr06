@@ -42,7 +42,3 @@ def test_lt():
     price2 = Price(30)
     assert price < price1
     assert not (price2 < price1)
-
-
-def test_
-
