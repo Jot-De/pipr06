@@ -10,27 +10,26 @@ class Price:
 
     @property
     def value_gr(self):
-        #This method is already done
+        # This method is already done
         return self._value_gr
 
     def __add__(self, other: "Price") -> "Price":
-        #This method is already done
+        # This method is already done
         return Price(self.value_gr + other.value_gr)
 
-
     def __sub__(self, other: "Price") -> "Price":
-        pass
+        return Price(self.value_gr - other.value_gr)
 
     def __mul__(self, multiplier: float) -> "Price":
-        pass
+        return Price(self.value_gr * multiplier)
 
     def __rmul__(self, multiplier: float) -> "Price":
-        pass
+        return Price(self.value_gr * multiplier)
 
     def __lt__(self, other: "Price"):
         # HINT this should allow sorting Prices by value_gr
-        pass
-
+        return self.value_gr < other.value_gr
+            
     @classmethod
     def from_float(cls, value: float) -> "Price":
         # HINT this will be called `p = Price.from_float(1.25)`
@@ -38,13 +37,14 @@ class Price:
         # HINT notice cls instead of self!
         # HINT `cls(125)` will be `Price(125)` in this case!
         # HINT try using the round() built-in function
-        pass
+        cls._value_gr = round(value * 100)
+        return cls
 
     def _split_price(self) -> Tuple[int, int]:
-        pass
+        return self.value_gr // 100, self.value_gr % 100
 
     def __str__(self) -> str:
-        pass
+        return self._format_price()
 
     def __repr__(self) -> str:
         # repr is a raw description of the instance
@@ -53,10 +53,11 @@ class Price:
 
     def _format_price(self):
         # HINT zl, gr = self._split_price()
-        pass
+        zl, gr = self._split_price()
+        return f'{zl} zł {gr} gr'
 
     def __eq__(self, other) -> bool:
-        pass
+        return self.value_gr == other.value_gr
 
 
 def random_price() -> Price:
