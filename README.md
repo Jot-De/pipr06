@@ -2,6 +2,7 @@
 
 ## Uwagi:
 * Omówić problemy z importem i testami przed labami za rok.
+* Był problemn z kropkami :/
 
 ## PRZED LABORATORIUM:
 
