@@ -1,5 +1,8 @@
 # PIPR LAB 6-7 - 23Z
 
+## Uwagi:
+* Omówić problemy z importem i testami przed labami za rok.
+
 ## PRZED LABORATORIUM:
 
 * stworzyć repo i wrzucić do niego zawartość katalogu [receipts_starter/](receipts_starter) - **1 takie repo per prowadzona grupa**
