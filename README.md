@@ -4,14 +4,12 @@
 * Omówić problemy z importem i testami przed labami za rok.
 * Był problemn z kropkami :/
 
+
 ## PRZED LABORATORIUM:
 
 * stworzyć repo i wrzucić do niego zawartość katalogu [receipts_starter/](receipts_starter) - **1 takie repo per prowadzona grupa**
 * wysłać do studentów prośbę o zalogowanie się do gitlaba wydziałowego i upewnienie się, że działa
 
-## ROZGRZEWKA - `@property`
-
-Demonstrujemy enkapsulację w Pythonie na przykładzie dekoratora `@property` w pliku [property.py](property.py). Wg uznania można tu pomachać palcem, że w C++ i w Javie takiego dekoratora nie ma i na 100% należy pisać gettery jak na filmiku. Następnie można powiedzieć, że Python to nie C++ ani Java i tutaj używa się innych idiomów.
 
 ## PROBLEM
 
