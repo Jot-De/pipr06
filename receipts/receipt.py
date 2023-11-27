@@ -7,6 +7,7 @@ from .receipt_position import ReceiptPosition, generate_positions
 from .price import Price
 from datetime import datetime
 
+
 class Receipt:
     # Already done
     def __init__(self, positions: list[ReceiptPosition] | None = None):
