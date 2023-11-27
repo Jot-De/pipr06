@@ -2,6 +2,8 @@ from typing import List
 from .price import Price
 import random
 
+
+
 BARCODE_LENGTH = 13
 
 BARCODE_LENGTH = 13
@@ -11,21 +13,21 @@ class Item:
     def __init__(self, name, price: Price, barcode: str = "1234567890123"):
         if not name:
             raise ValueError("Name cannot be empty")
-        #ADD MORE HERE
-        # HINT barcode must be valid and have 13 digits 
+        # ADD MORE HERE
+        # HINT bprint(generate_items(6))arcode must be valid and have 13 digits 
         if type(barcode) is not str:
             raise TypeError('Barcode must be string')
         if len(barcode) != 13:
             raise ValueError('Barcode must be 13 digits long.')
 
         self._name = name
-        #ADD MORE HERE
+        # ADD MORE HERE
         self._price = price
         self._barcode = barcode
 
     @property
     def name(self):
-        #This method is already done
+        # This method is already done
         return self._name
 
     @property
@@ -55,6 +57,9 @@ def random_item() -> Item:
     return Item(random_name, random_price, random_barcode)
 
 
-
 def generate_items(num_items: int) -> List[Item]:
     """Generates a given number of random items"""
+    items_lists = []
+    for i in range(num_items):
+        items_lists.append(random_item())
+    return items_lists

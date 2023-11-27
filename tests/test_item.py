@@ -1,14 +1,18 @@
 from receipts.item import Item
 import pytest
+from receipts.price import Price
+
 
 
 def test__init__():
     with pytest.raises(ValueError):
         Item('', 15)
 
+
 def test__init__typical():
     item = Item('Mleko', 15)
     assert item.name == 'Mleko'
+
 
 def test__init__price():
     item = Item('Mleko', 15)
