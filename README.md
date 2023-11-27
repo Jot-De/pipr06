@@ -1,4 +1,4 @@
-# PIPR LAB 6 - 23Z
+# PIPR 
 
 ## PRZED LABORATORIUM:
 
