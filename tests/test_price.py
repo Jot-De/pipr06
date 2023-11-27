@@ -1,5 +1,14 @@
+from random import randint
+from receipts.price import Price, random_price, generate_prices
 import pytest
-from pipr06.receipts.price import Price
+
+
+def test_random_price(monkeypatch):
+    def return_num(f, t):
+        return 50
+    monkeypatch.setattr('price.randint', return_num)
+    price1 = random_price()
+    assert price1.value_gr == 50
 
 
 def test_if_price_negative():
@@ -42,3 +51,8 @@ def test_lt():
     price2 = Price(30)
     assert price < price1
     assert not (price2 < price1)
+
+
+def test_generate_price():
+    price_list = generate_prices(5)
+    assert len(price_list) == 5

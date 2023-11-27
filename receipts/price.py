@@ -1,4 +1,5 @@
 from typing import Tuple, List
+from random import randint
 
 
 class Price:
@@ -62,7 +63,13 @@ class Price:
 
 def random_price() -> Price:
     """Generates a random Price object"""
+    price = Price(randint(0, 9999))
+    return price
 
 
 def generate_prices(num_prices: int) -> List[Price]:
     """Generates a given number of random items"""
+    list = []
+    for i in range(num_prices):
+        list.append(random_price())
+    return list
